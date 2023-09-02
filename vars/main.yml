@@ -1,0 +1,12 @@
+wordpress_db: mhj_wdb
+wordpress_user: mhj_user  
+wordpress_password: mhj_pass
+mysql_root_password: mhj_superpass
+
+mysql_databases:
+  - name: "{{wordpress_db}}"
+mysql_users:
+  - name: "{{wordpress_user}}"
+    host: "%"
+    password: "{{wordpress_password}}"
+    priv: "{{wordpress_user}}.*:ALL"
